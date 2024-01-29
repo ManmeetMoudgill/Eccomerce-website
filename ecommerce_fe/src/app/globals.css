@@ -8,4 +8,11 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+@keyframes fillAnimation {
+  from { width: 0%; }
+  to { width: 100%; }
+}
 
+.fill-bar {
+  animation: fillAnimation 5s ease-out forwards;
+}

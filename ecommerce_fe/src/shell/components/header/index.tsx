@@ -55,7 +55,7 @@ const HeaderComponent = () => {
 
 
 
-    return <header className="flex justify-between items-center px-7 py-5 fixed w-full top-0" >
+    return <header className="flex justify-between items-center px-7 py-5 fixed w-full top-0 z-[999]" >
         {/* LEFT CONTAINER */}
         <div className=" flex items-center w-[30%]">
             <div className=" mr-4">
