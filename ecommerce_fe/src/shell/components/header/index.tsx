@@ -7,6 +7,7 @@ import { FaFire } from "react-icons/fa";
 import { useEffect, useRef, useState } from 'react';
 import { useClickOutside } from '@/hooks/use-click-outside';
 import { useScrollHeightObserver } from '@/hooks/use-scroll-observer';
+import EcoSmallDevicesHeader from './smallDeviceHeader';
 
 
 const suggestionsForSearch = [
@@ -55,24 +56,26 @@ const HeaderComponent = () => {
 
 
 
-    return <header className="flex justify-between items-center px-7 py-5 fixed w-full top-0 z-[999]" >
+    return <>
+    
+    <header className="hidden lg:flex justify-between items-center px-7 py-5 fixed w-full top-0 z-[999]" >
         {/* LEFT CONTAINER */}
-        <div className=" flex items-center w-[30%]">
-            <div className=" mr-4">
-                <div className="w-12 cursor-pointer border-[1px] shadow-xl h-10 flex justify-center items-center bg-white rounded-[1.2rem]">
+        <div className=" flex items-center lg:w-[30%]">
+            <div className="mr-4 flex ">
+                <div className=" lg:w-12 cursor-pointer border-[1px] shadow-xl w-12 h-10 lg:h-10 flex justify-center items-center bg-white rounded-full lg:rounded-[1.2rem]">
                     <span className='text-[#FF9933] font-bold'>M</span>
                 </div>
             </div>
 
             {
                 !isHeightReached ? (
-
-                    <div className=" mr-6">
-                        <h2 className='text-black font-bold tracking-normal text-xl font-serif'>Moudgill Eccomerce</h2>
+                    
+                    <div className=" mr-6 hidden xl:flex">
+                        <h2 className='text-black font-bold tracking-normal   text-xl font-serif'>Moudgill Eccomerce</h2>
                     </div>
 
-                ) : undefined
-            }
+) : undefined
+}
             <div className=" mr-4">
                 <div className='flex justify-center items-center cursor-pointer hover:scale-105 transition-all delay-100 transform bg-[#4385F4] py-1 px-2 rounded-3xl shadow-lg'>
                     <RxHamburgerMenu className='text-base mr-2 font-bold text-white' />
@@ -89,18 +92,18 @@ const HeaderComponent = () => {
                         </ul>
                     </div>
 
-                ) : undefined
-            }
+) : undefined
+}
         </div>
-        <div className='flex flex-1  items-center w-[70%] '>
+        <div className='flex flex-1  items-center lg:w-[70%] '>
             {/* SEARCH CONTAINER */}
-            <div className="w-[50%] mr-3">
+            <div className="w-[50%] ml-3 lg:mr-3">
                 <div className='w-full relative flex'>
                     <input ref={inputRef} onClick={() => {
                         setIsSearchClicked(true);
-                    }} type="text" className='p-3 bg-white outline-none border-[1px] shadow-lg rounded-3xl w-full' />
+                    }} type="text" className=' p-2 lg:p-3 bg-white outline-none border-[1px] shadow-lg rounded-3xl w-full' />
                     <span className={`absolute right-0 rounded-r-3xl flex justify-center items-center  ${isSearchClicked ? 'bg-[#4385F4]' : ''} px-2  text-center  h-full`}>
-                        <IoMdSearch className={`${isSearchClicked ? 'text-white' : 'text-[#4385F4]'} font-bold text-3xl`} />
+                        <IoMdSearch className={`${isSearchClicked ? 'text-white' : 'text-[#4385F4]'} font-bold text-2xl lg:text-3xl`} />
                     </span>
                     {/* Search suggestion container */}
                     {
@@ -124,35 +127,41 @@ const HeaderComponent = () => {
             </div>
 
             {/* RIGHT SIDE NAVIGATION CART CONTAINER */}
-            <div className="w-[50%] flex  items-center ml-12">
+            <div className="w-[50%] flex  items-center ml-2 xl:ml-12">
                 <div className='flex justify-between items-center w-full'>
                     <div className='flex-1'>
                         <ul className='flex items-center justify-evenly'>
-                            <li className='text-lg flex flex-col group text-[#3C4043] font-bold cursor-pointer'>
+                            <li className='text-base lg:text-lg mx-3 lg:mx-0 flex flex-col group text-[#3C4043] font-bold cursor-pointer'>
                                 <a>Esplora</a>
                                 <span className='w-[0%] group-hover:w-[100%] transition-all transform delay-75 ease-in-out h-[2px] bg-[#3C4043]'></span>
                             </li>
-                            <li className='text-lg  flex flex-col group text-[#3C4043] font-bold cursor-pointer'>
+                            <li className='text-base lg:text-lgmx-3 lg:mx-0   flex flex-col group text-[#3C4043] font-bold cursor-pointer'>
                                 <a>Negozi</a>
                                 <span className='w-[0%] group-hover:w-[100%] transition-all transform delay-75 ease-in-out h-[2px] bg-[#3C4043]'></span>
                             </li>
                         </ul>
                     </div>
                     <div className='flex items-center  ml-4 '>
-                        <div className="w-12 mx-6  cursor-pointer border-[1px] shadow-xl h-10 flex justify-center items-center bg-white rounded-[1.2rem]">
+                        <div className="w-12 h-10   mr-5 xl:mx-6  cursor-pointer border-[1px] shadow-xl  flex justify-center items-center bg-white rounded-full lg:rounded-[1.2rem]">
                             <FaCartShopping className='text-[#3C4043] font-bold text-xl' />
                         </div>
-                        <div className="w-12 mx-6  cursor-pointer border-[1px] shadow-xl h-10 flex justify-center items-center bg-white rounded-[1.2rem]">
+                        <div className="w-12 h-10  mr-5 xl:mx-6  cursor-pointer border-[1px] shadow-xl  flex justify-center items-center bg-white rounded-full lg:rounded-[1.2rem]">
                             <FaUser className='text-[#3C4043] font-bold text-xl' />
                         </div>
-                        <div className="w-12 mx-6  cursor-pointer border-[1px] shadow-xl h-10 flex justify-center items-center bg-white rounded-[1.2rem]">
+                        <div className=" w-12 h-10  mr-0 xl:mx-6  cursor-pointer border-[1px] shadow-xl    flex justify-center items-center bg-white rounded-full lg:rounded-[1.2rem]">
                             <FaFire className='text-[#3C4043] font-bold text-xl' />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>;
+    </header>
+    
+    <header className='flex lg:hidden'>
+
+<EcoSmallDevicesHeader />
+    </header>
+                                </>
 };
 
 

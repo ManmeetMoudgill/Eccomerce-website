@@ -7,6 +7,7 @@ import Slide3 from "@/images/slide3.webp";
 import Slide4 from "@/images/slide4.webp";
 import Slide5 from "@/images/slide5.webp";
 import Slide6 from "@/images/slide6.webp";
+import Image from "next/image";
 
 
 
@@ -72,19 +73,21 @@ const EcoSliderComponent = () => {
 
 
 
-    return <div className="min-h-screen h-screen w-full -z-0">
+    return <div className="h-full w-full -z-0">
         <div className=" flex h-full overflow-x-hidden relative">
-            <div style={{
-                backgroundImage: `url(${slides[currentSlide].img?.src})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                height: '100%',
-                minWidth: '100vw',
+            <div  className="relative" style={{
                 transition: 'all 0.5s ease-in-out',
-            }} />
-        </div>
-        <div className="absolute bottom-12 w-full justify-center  flex">
+            }} 
+            >
+                <Image 
+                src={slides[currentSlide].img}
+                alt=""
+                className="w-full min-w-[100vw] max-h-screen h-full object-cover"
+               width={1920}
+               height={1080}
+                />
+                </div>
+        <div className="absolute bottom-8 lg:flex w-full justify-center  hidden">
                 {
                     slides.map((slide, index) => {
                         return <div onClick={() => setCurrentSlide(index)} key={slide.id} className=" cursor-pointer flex flex-col  justify-center items-center mx-6">
@@ -102,6 +105,21 @@ const EcoSliderComponent = () => {
                         </div>
                     })
                 }
+</div>
+<div className="absolute bottom-8 lg:hidden flex justify-center w-full items-center">
+
+                        <div  key={slides[currentSlide].id} className="  cursor-pointer flex flex-col  justify-center items-center mx-6">
+                            <span  className="text-[#3c4043] flex justify-center items-center px-10 ">
+                                {slides[currentSlide].name}
+                            </span>
+
+                            <div className=" hover:shadow-lg delay-75 transition-all min-h-[2px] w-[100%] bg-[#B3B3F5] my-2">
+                        
+                                    <div className="h-full bg-black rounded-full fill-bar"></div>
+                            </div>
+                        </div>
+
+        </div>
         </div>
     </div>;
 };

@@ -18,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body id="body" className={inter.className}>
+        
         <EcoHeader/>
         {children}
       </body>
