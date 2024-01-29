@@ -13,9 +13,12 @@ export function useElementHeightObserver(
 
   const heightRef = useRef<number | undefined>(domElement?.offsetHeight || 0);
 
+  console.log('heightRef', heightRef);
+
   const handleElementResize = useCallback(
     (entries:any) => {
       const elementOffsetHeight = entries[0].target.offsetHeight;
+      console.log('elementOffsetHeight', elementOffsetHeight);
 
       if (elementOffsetHeight !== heightRef.current) {
         heightRef.current = elementOffsetHeight;
