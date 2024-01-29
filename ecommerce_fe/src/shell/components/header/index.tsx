@@ -1,9 +1,38 @@
+"use client";
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
 import { FaFire } from "react-icons/fa";
+import { useRef, useState } from 'react';
+import { useClickOutside } from '@/hooks/use-click-outside';
+
+const suggestionsForSearch=[
+    {
+        id:1,
+        name:'Mobile',
+
+    },{
+        id:2,
+        name:'Laptop',
+    },{
+        id:3,
+        name:'Shoes',
+    },{
+        id:4,
+        name:'Shirts',
+    }
+]
 const HeaderComponent = () => {
+    const [isSearchClicked, setIsSearchClicked] = useState<boolean>(false);
+
+    const inputRef = useRef<HTMLInputElement>(null);
+
+     useClickOutside(() => {
+        setIsSearchClicked(false);
+    }, inputRef);
+
+
     return <header className="flex justify-between items-center px-7 py-5">
         {/* LEFT CONTAINER */}
         <div className=" flex items-center w-[30%]">
@@ -25,11 +54,31 @@ const HeaderComponent = () => {
         <div className='flex flex-1  items-center w-[70%] '>
             {/* SEARCH CONTAINER */}
             <div className="w-[50%] mr-3">
-                <div className='w-full relative'>
-                    <input type="text" className='p-3 bg-white outline-none border-[1px] shadow-2xl rounded-3xl w-full' />
-                    <span className='absolute right-4 top-[0.6rem]'>
-                        <IoMdSearch className='text-[#4385F4] font-bold text-3xl' />
+                <div className='w-full relative flex'>
+                    <input ref={inputRef} onClick={()=>{
+                        setIsSearchClicked(true);
+                    }} type="text" className='p-3 bg-white outline-none border-[1px] shadow-lg rounded-3xl w-full' />
+                    <span className={`absolute right-0 rounded-r-3xl flex justify-center items-center  ${isSearchClicked ? 'bg-[#4385F4]':''} px-2  text-center  h-full`}>
+                        <IoMdSearch className={`${isSearchClicked ? 'text-white':'text-[#4385F4]' } font-bold text-3xl`} />
                     </span>
+                    {/* Search suggestion container */}
+                    {
+                        isSearchClicked ? (
+                    <div className='absolute flex items-center -bottom-10 left-0 w-full flex-wrap'>
+                            {
+                                suggestionsForSearch?.map((item)=>{
+                                    return (
+                                        <>
+                                            <div className='flex justify-between cursor-pointer group transition-all delay-175  ease-in-out items-center px-2 py-1 border-[1px] hover:border-[#4385F4] shadow-xl rounded-2xl mx-1 '>
+                                                <span className='text-[#3C4043] group-hover:text-[#4385F4] text-sm font-bold'>{item.name}</span>
+                                            </div>
+                                        </>
+                                    )
+                                })
+                            }
+                    </div>
+                        ):undefined
+                    }
                 </div>
             </div>
 
