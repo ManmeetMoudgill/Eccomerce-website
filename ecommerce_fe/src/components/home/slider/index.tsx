@@ -116,7 +116,7 @@ const EcoSliderComponent = () => {
   });
 
   return (
-    <div className="h-full w-full -z-[111]">
+    <div className="h-full w-full ">
       <div className=" hidden md:flex h-full overflow-x-hidden relative">
         <div
           className="relative"

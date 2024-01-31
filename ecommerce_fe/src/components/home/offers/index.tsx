@@ -1,5 +1,5 @@
 'use client';
-import { memo } from 'react';
+import { memo, useRef } from 'react';
 import { IoInformationCircleOutline } from 'react-icons/io5';
 import Slider from 'react-slick';
 import EcoOfferItem, { EcoOfferItemProps } from './offerItem';
@@ -14,6 +14,7 @@ import Offer7 from '@/images/offers/offer7.jpg';
 import Offer8 from '@/images/offers/offer8.jpg';
 import Offer9 from '@/images/offers/offer9.jpg';
 import Offer10 from '@/images/offers/offer10.jpg';
+import useInViewport from '@/hooks/use-in-viewport';
 
 const OfferItems: Array<EcoOfferItemProps> = [
   {
@@ -164,8 +165,20 @@ const EcoOffersComponent = () => {
       },
     ],
   };
+
+  const ref = useRef<HTMLDivElement>(null);
+  const isElementInViewPort = useInViewport(ref);
+
+  /* eslint-disable */
+  console.log(isElementInViewPort);
+
+  /* eslint-disable */
+
   return (
-    <div className="b p-4 flex justify-center bg-white rounded-tl-2xl rounded-tr-2xl shadow-xl items-center w-full">
+    <div
+      ref={ref}
+      className="b p-4 flex justify-center bg-white rounded-tl-2xl rounded-tr-2xl shadow-xl items-center w-full"
+    >
       <div className="w-[88%]  my-16">
         {/* UPPER CONTAINER */}
         <div className="flex flex-col">
