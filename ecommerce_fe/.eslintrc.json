@@ -29,7 +29,7 @@
       "class-methods-use-this": 0,
       "no-alert": "error",
       "no-confusing-arrow": 0,
-      "no-console": 2,
+      "no-console": "off",
       "no-mixed-operators": "warn",
       "no-param-reassign": "warn",
       "no-shadow": "off",
@@ -39,13 +39,8 @@
       "object-curly-newline": "off",
       "operator-linebreak": "off",
       "prefer-destructuring": "warn",
-      "prefer-template": 2,
-      "react/display-name": [
-        2,
-        {
-          "ignoreTranspilerName": true
-        }
-      ]
+      "prefer-template": 2
+    
     }
   }
   
