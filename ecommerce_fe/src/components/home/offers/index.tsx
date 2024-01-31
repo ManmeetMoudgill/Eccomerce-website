@@ -1,5 +1,5 @@
 'use client';
-import { memo, useRef } from 'react';
+import { memo } from 'react';
 import { IoInformationCircleOutline } from 'react-icons/io5';
 import Slider from 'react-slick';
 import EcoOfferItem, { EcoOfferItemProps } from './offerItem';
@@ -14,7 +14,7 @@ import Offer7 from '@/images/offers/offer7.jpg';
 import Offer8 from '@/images/offers/offer8.jpg';
 import Offer9 from '@/images/offers/offer9.jpg';
 import Offer10 from '@/images/offers/offer10.jpg';
-import useInViewport from '@/hooks/use-in-viewport';
+import EcoTodaysOffer from '../todaysOffer';
 
 const OfferItems: Array<EcoOfferItemProps> = [
   {
@@ -166,23 +166,12 @@ const EcoOffersComponent = () => {
     ],
   };
 
-  const ref = useRef<HTMLDivElement>(null);
-  const isElementInViewPort = useInViewport(ref);
-
-  /* eslint-disable */
-  console.log(isElementInViewPort);
-
-  /* eslint-disable */
-
   return (
-    <div
-      ref={ref}
-      className="b p-4 flex justify-center bg-white rounded-tl-2xl rounded-tr-2xl shadow-xl items-center w-full"
-    >
+    <div className="b p-4 flex justify-center flex-col bg-white rounded-tl-2xl rounded-tr-2xl shadow-xl items-center w-full">
       <div className="w-[88%]  my-16">
         {/* UPPER CONTAINER */}
         <div className="flex flex-col">
-          <h2 className="text-4xl mb-4 font-bold text-[#3C4043]">Da non perdere!</h2>
+          <h2 className="text-5xl mb-4 font-bold text-[#3C4043]">Da non perdere!</h2>
           <span className="text-base mb-2 font-semibold">
             <a className="underline font-bold">Clicca qui</a> per scoprire tutti i prodotti
           </span>
@@ -199,6 +188,7 @@ const EcoOffersComponent = () => {
           </Slider>
         </div>
       </div>
+      <EcoTodaysOffer />
     </div>
   );
 };
