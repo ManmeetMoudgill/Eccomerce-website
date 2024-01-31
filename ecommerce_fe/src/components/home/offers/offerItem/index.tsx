@@ -97,7 +97,7 @@ const EcoOfferItemComponent = ({
             {/* lower container */}
             <div className="flex items-center text-xs mt-2">
               <span>Prezzo consigliato</span>
-              <span>{regularPrice}</span>
+              <span className="ml-1"> {regularPrice}</span>
             </div>
           </div>
         </div>

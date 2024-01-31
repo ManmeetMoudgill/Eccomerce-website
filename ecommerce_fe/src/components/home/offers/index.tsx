@@ -16,7 +16,7 @@ import Offer9 from '@/images/offers/offer9.jpg';
 import Offer10 from '@/images/offers/offer10.jpg';
 import EcoTodaysOffer from '../todaysOffer';
 
-const OfferItems: Array<EcoOfferItemProps> = [
+export const OfferItems: Array<EcoOfferItemProps> = [
   {
     _id: '1',
     name: 'Apple MacBook Air 13" M1 8-core CPU 7-core GPU 256GB Grigio Siderale',
@@ -114,7 +114,7 @@ const EcoOffersComponent = () => {
     dots: false,
     arrow: true,
     infinite: true,
-    speed: 100,
+    speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
