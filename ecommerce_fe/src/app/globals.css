@@ -17,3 +17,32 @@
 .fill-bar {
   animation: fillAnimation 5s ease-out forwards;
 }
+
+
+::-webkit-scrollbar {
+  height: 5px !important;
+  border-radius: 10px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px !important;
+  height: 5px !important;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d3cece;
+  border-radius: 10px !important;
+  height: 5px !important;
+
+
+}
+
+
+
+::-webkit-scrollbar-thumb:active {
+  background: #d3cece;
+  border-radius: 10px !important;
+
+}

@@ -167,7 +167,7 @@ const EcoOffersComponent = () => {
   };
 
   return (
-    <div className="b p-4 flex justify-center flex-col bg-white rounded-tl-2xl rounded-tr-2xl shadow-xl items-center w-full">
+    <div className="b p-4 flex justify-center flex-col items-center w-full">
       <div className="w-[88%]  my-16">
         {/* UPPER CONTAINER */}
         <div className="flex flex-col">
