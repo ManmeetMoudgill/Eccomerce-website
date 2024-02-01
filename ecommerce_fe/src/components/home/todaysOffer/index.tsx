@@ -146,7 +146,7 @@ const EcoTodaysOfferComponent = () => {
       {
         breakpoint: 1500,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
           arrow: true,
@@ -156,7 +156,7 @@ const EcoTodaysOfferComponent = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
           arrow: true,

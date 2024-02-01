@@ -1,55 +1,46 @@
-import Image from 'next/image';
 import Banner1 from '@/images/banners/banner1.webp';
 import Banner2 from '@/images/banners/banner2.webp';
 import Banner3 from '@/images/banners/banner3.webp';
 import Banner4 from '@/images/banners/banner4.webp';
+import Banner5 from '@/images/banners/banner5.webp';
 
 const EcoFeaturesBanner = () => {
   return (
-    <div className="flex justify-center items-center mb-16  w-full">
-      <div className="  flex  h-[30vw]  w-[85%] overflow-x-auto pb-4">
-        <div className="h-full min-w-[450px] overflow-hidden mr-12 rounded-lg border-[1px] border-gray-200">
-          <Image
+    <div className="mb-16 overflow-x-scroll  w-full pl-[7vw]  ">
+      <div className="  flex  pb-4 min-w-[3700px] ">
+        <div className="h-[30vw] relative mr-8">
+          <img
             src={Banner1?.src}
             alt="banner1"
-            width={450}
-            height={500}
-            priority
-            quality={100}
-            className="w-[450px] h-full object-cover"
+            className="min-w-full w-full  rounded-lg shadow-md h-full object-cover"
           />
         </div>
-        <div className=" min-w-[850px] h-full mr-8  overflow-hidden rounded-lg border-[1px] border-gray-200">
-          <Image
+        <div className="h-[30vw]  relative mr-8">
+          <img
             src={Banner2?.src}
-            alt="banner1"
-            width={850}
-            height={500}
-            priority
-            quality={100}
-            className="w-[850px] h-full object-cover"
+            alt="banner2"
+            className="min-w-full w-full rounded-lg shadow-md  h-full object-cover"
           />
         </div>
-        <div className=" min-w-[450px] h-full mr-4 overflow-hidden rounded-lg border-[1px] border-gray-200">
-          <Image
+        <div className="h-[30vw] relative mr-8">
+          <img
             src={Banner3?.src}
-            alt="banner1"
-            width={450}
-            height={500}
-            priority
-            quality={100}
-            className="w-[450px] h-full object-cover"
+            alt="banner3"
+            className="min-w-full w-full rounded-lg shadow-md  h-full object-cover"
           />
         </div>
-        <div className=" min-w-[850px] h-full mr-1 overflow-hidden rounded-lg border-[1px] border-gray-200">
-          <Image
+        <div className="h-[30vw]  relative mr-8">
+          <img
             src={Banner4?.src}
-            alt="banner1"
-            width={850}
-            height={500}
-            priority
-            quality={100}
-            className="w-[850px] h-full object-cover"
+            alt="banner4"
+            className="min-w-full w-full  rounded-lg shadow-md h-full object-cover"
+          />
+        </div>
+        <div className="h-[30vw]  relative ">
+          <img
+            src={Banner5?.src}
+            alt="banner5"
+            className="min-w-full w-full rounded-md shaodw-md  h-full object-cover"
           />
         </div>
       </div>
