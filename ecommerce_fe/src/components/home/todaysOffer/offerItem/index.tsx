@@ -2,6 +2,7 @@ import { memo } from 'react';
 import { EcoOfferItemProps } from '../../offers/offerItem';
 import Image from 'next/image';
 import { IoIosStar, IoMdCart } from 'react-icons/io';
+import { CiHeart } from 'react-icons/ci';
 interface EcoTodaysOfferItemProps extends EcoOfferItemProps {
   isAvailableOnlyOnline?: boolean;
   isMostAppreciated?: boolean;
@@ -16,7 +17,7 @@ const EcoTodaysOfferItemComponent = ({
 }: EcoTodaysOfferItemProps) => {
   return (
     <div
-      className="  border-[1px] border-gray-200 group rounded-lg shadow-sm hover:shadow-xl transition delay-75 ease-in-out cursor-pointer"
+      className="  border-[1px] border-gray-200 group hover:-translate-y-2 transform rounded-lg shadow-sm hover:shadow-xl transition delay-75 ease-in-out cursor-pointer"
       style={{
         margin: '0 0.5vw',
       }}
@@ -75,13 +76,19 @@ const EcoTodaysOfferItemComponent = ({
           </div>
 
           {/* ADD TO CART CONATINER VISIBLE ON HOVER */}
-          <div className={`min-h-14 flex items-center`}>
+          <div className={`min-h-10 flex items-center`}>
             <div
-              className={`hidden w-full  group-hover:flex transition-all delay-75 h-full ease-in-out justify-end items-center`}
+              onClick={() => {
+                console.log('clicked');
+              }}
+              className={`hidden w-full  group-hover:flex transition-all transform delay-200 duration-500 ease-in-out justify-between items-center pt-2`}
             >
-              <div className="flex justify-center items-center w-12 h-8 rounded-2xl shadow-xl">
+              <button className="flex justify-center items-center w-12 h-8 rounded-2xl shadow-xl">
+                <CiHeart className="text-xl text-black " />
+              </button>
+              <button className="flex justify-center items-center w-12 h-8 rounded-2xl shadow-xl">
                 <IoMdCart className="text-xl text-[#FF9933] font-bold" />
-              </div>
+              </button>
             </div>
           </div>
         </div>

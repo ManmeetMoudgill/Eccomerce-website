@@ -51,7 +51,7 @@ const EcoOfferItemComponent = ({
   return (
     <>
       <div
-        className=" p-3 flex-col  "
+        className=" p-3 flex-col hover:scale-105 transition-all transform delay-75 ease-in-out cursor-pointer"
         style={{
           margin: '0 2.2vw',
         }}
