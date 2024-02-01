@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import EcoHeader from '@/shell/components/header';
+import EcoCommerceMain from '@/shell/components/main';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,8 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body id="body" className={inter.className}>
-        <EcoHeader />
-        {children}
+        <EcoCommerceMain childrenElement={children} />
       </body>
     </html>
   );

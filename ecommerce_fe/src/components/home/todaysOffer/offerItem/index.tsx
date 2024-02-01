@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { EcoOfferItemProps } from '../../offers/offerItem';
 import Image from 'next/image';
-import { IoIosStar } from 'react-icons/io';
+import { IoIosStar, IoMdCart } from 'react-icons/io';
 interface EcoTodaysOfferItemProps extends EcoOfferItemProps {
   isAvailableOnlyOnline?: boolean;
   isMostAppreciated?: boolean;
@@ -16,7 +16,7 @@ const EcoTodaysOfferItemComponent = ({
 }: EcoTodaysOfferItemProps) => {
   return (
     <div
-      className="  border-[1px] border-gray-200 rounded-lg shadow-sm hover:shadow-xl transition delay-75 ease-in-out cursor-pointer"
+      className="  border-[1px] border-gray-200 group rounded-lg shadow-sm hover:shadow-xl transition delay-75 ease-in-out cursor-pointer"
       style={{
         margin: '0 0.5vw',
       }}
@@ -72,6 +72,17 @@ const EcoTodaysOfferItemComponent = ({
           <div className="flex items-center text-xs mt-1">
             <span>Prezzo consigliato </span>
             <span className="ml-1"> {regularPrice}</span>
+          </div>
+
+          {/* ADD TO CART CONATINER VISIBLE ON HOVER */}
+          <div className={`min-h-14 flex items-center`}>
+            <div
+              className={`hidden w-full  group-hover:flex transition-all delay-75 h-full ease-in-out justify-end items-center`}
+            >
+              <div className="flex justify-center items-center w-12 h-8 rounded-2xl shadow-xl">
+                <IoMdCart className="text-xl text-[#FF9933] font-bold" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

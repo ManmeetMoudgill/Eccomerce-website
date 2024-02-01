@@ -1,3 +1,4 @@
+'use client';
 import React, { ReactElement, ReactNode } from 'react';
 import mitt from 'mitt';
 

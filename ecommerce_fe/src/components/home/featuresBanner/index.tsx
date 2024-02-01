@@ -6,8 +6,8 @@ import Banner5 from '@/images/banners/banner5.webp';
 
 const EcoFeaturesBanner = () => {
   return (
-    <div className="mb-16 overflow-x-scroll  w-full pl-[7vw]  ">
-      <div className="  flex  pb-4 min-w-[3700px] ">
+    <div className="my-12 overflow-x-scroll  w-full pl-[7vw]  ">
+      <div className="  flex  ml-2 pb-4 min-w-max">
         <div className="h-[30vw] relative mr-8">
           <img
             src={Banner1?.src}
@@ -36,7 +36,7 @@ const EcoFeaturesBanner = () => {
             className="min-w-full w-full  rounded-lg shadow-md h-full object-cover"
           />
         </div>
-        <div className="h-[30vw]  relative ">
+        <div className="h-[30vw]  relative mr-8">
           <img
             src={Banner5?.src}
             alt="banner5"

@@ -15,6 +15,7 @@ import Offer8 from '@/images/offers/offer8.jpg';
 import Offer9 from '@/images/offers/offer9.jpg';
 import Offer10 from '@/images/offers/offer10.jpg';
 import EcoTodaysOffer from '../todaysOffer';
+import { useInView } from 'react-intersection-observer';
 
 export const OfferItems: Array<EcoOfferItemProps> = [
   {
@@ -165,31 +166,38 @@ const EcoOffersComponent = () => {
       },
     ],
   };
+  const { ref } = useInView({
+    /* Optional options */
+    threshold: 0.5,
+    rootMargin: '0px 0px 0px 0px',
+  });
 
   return (
-    <div className="b p-4 flex justify-center flex-col items-center w-full">
-      <div className="w-[88%]  my-16">
-        {/* UPPER CONTAINER */}
-        <div className="flex flex-col">
-          <h2 className="text-5xl mb-4 font-bold text-[#3C4043]">Da non perdere!</h2>
-          <span className="text-base mb-2 font-semibold">
-            <a className="underline font-bold">Clicca qui</a> per scoprire tutti i prodotti
-          </span>
-          <span className="text-sm text-[#8B7575] flex items-center">
-            <p>Maggiori informazioni sul calcolo del prezzo</p>
-            <IoInformationCircleOutline className="text-base text-[#8B7575] font-bold ml-2" />
-          </span>
+    <>
+      <div className=" p-4 h-full flex justify-center flex-col items-center w-full" ref={ref}>
+        <div className="w-[88%]  my-16">
+          {/* UPPER CONTAINER */}
+          <div className="flex flex-col">
+            <h2 className="text-5xl mb-4 font-bold text-[#3C4043]">Da non perdere!</h2>
+            <span className="text-base mb-2 font-semibold">
+              <a className="underline font-bold">Clicca qui</a> per scoprire tutti i prodotti
+            </span>
+            <span className="text-sm text-[#8B7575] flex items-center">
+              <p>Maggiori informazioni sul calcolo del prezzo</p>
+              <IoInformationCircleOutline className="text-base text-[#8B7575] font-bold ml-2" />
+            </span>
+          </div>
+          <div className=" mt-10 pt-2">
+            <Slider {...settings}>
+              {OfferItems?.map((item) => {
+                return <EcoOfferItem key={item?._id} {...item} />;
+              })}
+            </Slider>
+          </div>
         </div>
-        <div className=" mt-10 pt-2">
-          <Slider {...settings}>
-            {OfferItems?.map((item) => {
-              return <EcoOfferItem key={item?._id} {...item} />;
-            })}
-          </Slider>
-        </div>
+        <EcoTodaysOffer />
       </div>
-      <EcoTodaysOffer />
-    </div>
+    </>
   );
 };
 

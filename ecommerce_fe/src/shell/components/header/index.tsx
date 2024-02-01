@@ -47,8 +47,6 @@ const HeaderComponent = () => {
     }
   });
 
-  //console.log(isHeightReached);
-
   return (
     <>
       <header className="hidden lg:flex justify-between items-center px-7 py-5 fixed w-full top-0 z-[999]">
