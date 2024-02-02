@@ -9,6 +9,10 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+.text-social{
+  text-shadow: -1px 0 #3c4043, 0 1px #3c4043, 1px 0 #3c4043, 0 -1px #3c4043;
+}
+
 
 .slick-slider{
   padding-bottom: 10px !important;

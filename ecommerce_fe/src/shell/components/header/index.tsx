@@ -49,7 +49,7 @@ const HeaderComponent = () => {
 
   return (
     <>
-      <header className="hidden lg:flex justify-between items-center px-7 py-5 fixed w-full top-0 z-[999]">
+      <header className="hidden lg:flex justify-between items-center px-7 py-4 fixed w-full top-0 z-[999] bg-gray-200 rounded-bl-lg rounded-br-lg">
         {/* LEFT CONTAINER */}
         <div className=" flex items-center lg:w-[30%]">
           <div className="mr-4 flex ">

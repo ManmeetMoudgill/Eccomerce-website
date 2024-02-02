@@ -13,7 +13,7 @@ const EcoFeaturesBanner = () => {
   return (
     <div className="my-12 overflow-x-scroll  w-full pl-[7vw]  ">
       <div className="  flex  ml-2 pb-4 min-w-max">
-        <div className=" h-[80vw] lg:h-[30vw] relative mr-8">
+        <div className="h-[85vw] sm:h-[80vw] lg:h-[30vw] relative mr-8">
           <img
             src={Banner1?.src}
             alt="banner1"
@@ -25,7 +25,7 @@ const EcoFeaturesBanner = () => {
             className="min-w-full w-full  block lg:hidden rounded-lg shadow-md h-full object-cover"
           />
         </div>
-        <div className=" h-[80vw] lg:h-[30vw]  relative mr-8">
+        <div className="h-[85vw] sm:h-[80vw] lg:h-[30vw]  relative mr-8">
           <img
             src={Banner2?.src}
             alt="banner2"
@@ -37,7 +37,7 @@ const EcoFeaturesBanner = () => {
             className="min-w-full w-full  block lg:hidden rounded-lg shadow-md h-full object-cover"
           />
         </div>
-        <div className=" h-[80vw] lg:h-[30vw] relative mr-8">
+        <div className="h-[85vw] sm:h-[80vw] lg:h-[30vw] relative mr-8">
           <img
             src={Banner3?.src}
             alt="banner3"
@@ -49,7 +49,7 @@ const EcoFeaturesBanner = () => {
             className="min-w-full w-full  block lg:hidden rounded-lg shadow-md h-full object-cover"
           />
         </div>
-        <div className=" h-[80vw] lg:h-[30vw]  relative mr-8">
+        <div className="h-[85vw] sm:h-[80vw] lg:h-[30vw]  relative mr-8">
           <img
             src={Banner4?.src}
             alt="banner4"
@@ -61,7 +61,7 @@ const EcoFeaturesBanner = () => {
             className="min-w-full w-full  block lg:hidden rounded-lg shadow-md h-full object-cover"
           />
         </div>
-        <div className=" h-[80vw] lg:h-[30vw]  relative mr-8">
+        <div className="h-[85vw] sm:h-[80vw] lg:h-[30vw]  relative mr-8">
           <img
             src={Banner5?.src}
             alt="banner5"
