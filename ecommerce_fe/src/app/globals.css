@@ -9,6 +9,11 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+
+.slick-slider{
+  padding-bottom: 10px !important;
+}
+
 @keyframes fillAnimation {
   from { width: 0%; }
   to { width: 100%; }
