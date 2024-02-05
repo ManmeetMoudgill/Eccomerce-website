@@ -1,5 +1,6 @@
 'use client';
 import EcoFeaturesBanner from '@/components/home/featuresBanner';
+import EcoForYourService from '@/components/home/forYourService';
 import EcoOffers from '@/components/home/offers';
 import EcoOffersBook from '@/components/home/offersBook';
 import EcoSlider from '@/components/home/slider';
@@ -11,6 +12,7 @@ const Home = () => {
       <EcoOffers />
       <EcoFeaturesBanner />
       <EcoOffersBook />
+      <EcoForYourService />
     </main>
   );
 };
