@@ -132,7 +132,7 @@ const EcoOffersComponent = () => {
       {
         breakpoint: 1500,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           arrow: true,
@@ -140,7 +140,7 @@ const EcoOffersComponent = () => {
         },
       },
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
