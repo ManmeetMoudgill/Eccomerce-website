@@ -12,76 +12,76 @@ import Payment10 from '@/images/paymentMethods/payment10.jpg';
 const EcoFooter = () => {
   return (
     <footer className=" flex  w-full justify-center items-center py-4 bg-[#3C4043] text-white">
-      <div className="flex justify-between  w-[80%]">
-        <div className="flex items-center ">
+      <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between mb-2 lg:mb-0 w-[80%]">
+        <div className="flex items-center justify-center my-3 lg:my-0 lg:justify-start">
           <p className="text-base">Manmeet Moudgill Eccommerce All rights reserved. 2024-2025</p>
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex flex-wrap md:flex-nowrap justify-center items-center">
           <Image
-            className="mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
+            className="my-1 md:my-0 mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
             src={Payment1?.src}
             alt="Payment1"
             width={40}
             height={40}
           />
           <Image
-            className="mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
+            className="my-1 md:my-0 mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
             src={Payment2?.src}
             alt="Payment2"
             width={40}
             height={40}
           />
           <Image
-            className="mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
+            className="my-1 md:my-0 mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
             src={Payment3?.src}
             alt="Payment3"
             width={40}
             height={40}
           />
           <Image
-            className="mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
+            className="my-1 md:my-0 mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
             src={Payment4?.src}
             alt="Payment4"
             width={40}
             height={40}
           />
           <Image
-            className="mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
+            className="my-1 md:my-0 mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
             src={Payment5?.src}
             alt="Payment5"
             width={40}
             height={40}
           />
           <Image
-            className="mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
+            className="my-1 md:my-0 mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
             src={Payment6?.src}
             alt="Payment6"
             width={40}
             height={40}
           />
           <Image
-            className="mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
+            className="my-1 md:my-0 mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
             src={Payment7?.src}
             alt="Payment7"
             width={40}
             height={40}
           />
           <Image
-            className="mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
+            className="my-1 md:my-0 mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
             src={Payment8?.src}
             alt="Payment8"
             width={40}
             height={40}
           />
           <Image
-            className="mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
+            className="my-1 md:my-0 mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
             src={Payment9?.src}
             alt="Payment9"
             width={40}
             height={40}
           />
           <Image
-            className="mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
+            className="my-1 md:my-0 mx-2 hover:scale-125 cursor-pointer  transition-all delay-100 transform ease-in-out"
             src={Payment10?.src}
             alt="Payment10"
             width={40}

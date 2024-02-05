@@ -4,7 +4,7 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 
 const EcoSmallDevicesHeaderComponent = () => {
   return (
-    <div className="flex flex-col w-full  p-5">
+    <div className="flex flex-col w-full  p-5 bg-gray-200 rounded-bl-xl rounded-br-xl">
       <div className=" flex items-center">
         <div className=" justify-center items-center">
           <RxHamburgerMenu className="text-3xl text-black " />
@@ -21,10 +21,10 @@ const EcoSmallDevicesHeaderComponent = () => {
         </div>
       </div>
       <div className="">
-        <div className="w-full relative flex mt-7">
+        <div className="w-full relative flex mt-3">
           <input
             type="text"
-            className=" p-[10px] lg:p-3 bg-white outline-none border-[1px] shadow-lg rounded-3xl w-full"
+            className=" p-[8px] lg:p-3 bg-white outline-none border-[1px] shadow-lg rounded-3xl w-full"
           />
           <span
             className={`absolute right-0 rounded-r-3xl flex justify-center items-center px-2  text-center  h-full`}

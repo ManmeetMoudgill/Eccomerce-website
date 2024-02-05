@@ -164,7 +164,7 @@ const HeaderComponent = () => {
               ) : undefined}
             </div>
             {isHeightReached ? (
-              <div className="flex">
+              <div className=" hidden xl:flex">
                 <ul className="flex items-center">
                   <li className="mx-1 text-black text-sm font-semibold">
                     <a>Informatica</a>
