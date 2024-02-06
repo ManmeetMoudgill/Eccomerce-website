@@ -17,7 +17,8 @@ import Category6 from '@/images/headerList/category6.jpg';
 import Category7 from '@/images/headerList/category7.jpg';
 import Category8 from '@/images/headerList/category8.jpg';
 import Image from 'next/image';
-const CATEGORIES = [
+import { useEventsStore } from '@/store/events';
+export const CATEGORIES = [
   {
     id: 1,
     name: 'Informatica',
@@ -105,10 +106,14 @@ const HeaderComponent = () => {
     }
   });
 
+  const { isFiltersOpen } = useEventsStore();
+
   return (
     <>
       <header className="hidden lg:flex w-full relative">
-        <div className=" flex justify-between items-center px-7 py-4 fixed w-full top-0 z-[999] bg-gray-200 rounded-bl-lg rounded-br-lg">
+        <div
+          className={`flex justify-between items-center px-7 py-4 fixed w-full top-0  ${isFiltersOpen ? 'z-[-111]' : 'z-[999]'} bg-gray-100 rounded-bl-lg rounded-br-lg`}
+        >
           {/* LEFT CONTAINER */}
           <div className=" flex items-center lg:w-[30%]">
             <div className="mr-4 flex ">

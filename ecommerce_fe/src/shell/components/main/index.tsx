@@ -6,14 +6,15 @@ import EcoHeader from '../header';
 import EcoFooter from '../footer';
 
 interface EcoCommerceMainProps {
-  childrenElement: React.ReactNode;
+  children: React.ReactNode;
+  hasFooter?: boolean;
 }
-const EcoCommerceMainComponent = ({ childrenElement }: EcoCommerceMainProps) => {
+const EcoCommerceMainComponent = ({ children, hasFooter = true }: EcoCommerceMainProps) => {
   return (
     <EventBusProvider>
       <EcoHeader />
-      {childrenElement}
-      <EcoFooter />
+      {children}
+      {hasFooter ? <EcoFooter /> : undefined}
     </EventBusProvider>
   );
 };
